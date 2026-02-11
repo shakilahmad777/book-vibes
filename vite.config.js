@@ -5,5 +5,5 @@ export default defineConfig({
   plugins: [
     tailwindcss()
   ],
-  base: '/' 
+  base: process.env.VITE_BASE_PATH || '/book-vibes'
 });
