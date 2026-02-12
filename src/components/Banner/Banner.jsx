@@ -1,7 +1,7 @@
-import bannerImage from '../../../public/pngwing1.png'
+import bannerImage from '../../assets/pngwing1.png'
 export default function Banner() {
     return (
-        <div className='flex justify-center flex-col-reverse sm:flex-row sm:justify-around p-10 sm:bg-[#EEEEEE] rounded-[1rem] md:rounded-[2rem] my-10 lg:min-h-dvh'>
+        <div className='flex justify-center flex-col-reverse sm:flex-row sm:justify-around p-10 sm:bg-[#EEEEEE] rounded-[1rem] md:rounded-[2rem] my-10 '>
             <div className="w-full justify-center md:w-2/5 h-auto sm:grid sm:justify-between sm:items-center">
                 <h1 className='text-2xl lg:text-4xl font-bold md:tracking-wide leading-[1.5] sm:text-black'>Books to freshen up your bookshelf</h1>
                 <div className="grid sm:flex">
