@@ -5,7 +5,7 @@ import NavBar from '../../components/Header/NavBar'
 
 export default function Root() {
   return (
-    <div className='mx-5 md:mx-10 max-w-auto'>
+    <div className='mx-5 md:mx-20 max-w-auto'>
         <NavBar></NavBar>
         <Outlet></Outlet>
         <Footer></Footer>

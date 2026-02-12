@@ -13,17 +13,24 @@ export default function BookDetails() {
 			<div className="h-screen flex justify-center items-center">
 				<img className='h-full p-10 md:py-15 md:rotate-x-15 md:-rotate-y-30' src={image} alt="" />
 			</div>
-			<div className="">
+			<div className="mx-10">
 				<h1>{bookName}</h1>
-				<p>
-					My: {author}
+				<p className=''>
+					By: {author}
 				</p>
-				<p>
+				<p className='border-y-1 border-gray-200 py-3'>
 					{category}
 				</p>
 				<p>
-					{review}
+					Review: {review}
 				</p>
+				<p className=" flex gap-10">
+					{tags.map((tags, index) => <button key={index} className='btn'>{tags}</button>)}
+				</p>
+				<p className="">Number of Page: {totalPages}</p>
+				<p className="">Publisher: {publisher}</p>
+				<p className="">Year of Publishing: {yearOfPublishing}</p>
+				<p className="">Rating: {rating}</p>
 			</div>
 		</div>
 	)
