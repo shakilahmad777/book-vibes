@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
-import { useNavigate } from "react-router"
+import { NavLink, useNavigate } from "react-router"
 
 export default function NavBar() {
     const backHome = useNavigate()
@@ -9,10 +9,10 @@ export default function NavBar() {
         <li><a onClick={() => backHome('/')}>Home</a></li>
         <li>
             <details>
-                <summary>Listed Book</summary>
+                <summary><NavLink to="/read_wish_list">Listed Book</NavLink></summary>
                 <ul className="p-2 bg-base-100 w-40 z-1">
-                    <li><a>Favorite</a></li>
-                    <li><a>Submenu 2</a></li>
+                    <li><a>Read List</a></li>
+                    <li><a>Wish List</a></li>
                 </ul>
             </details>
         </li>
