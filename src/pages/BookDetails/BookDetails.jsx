@@ -40,7 +40,7 @@ export default function BookDetails() {
 				<p className="">Number of Page: {totalPages}</p>
 				<p className="">Publisher: {publisher}</p>
 				<p className="">Year of Publishing: {yearOfPublishing}</p>
-				<p className="">Rating: {rating}</p>
+				<p>Rating: {rating} <span className='font-bold text-xl text-[#23BE0A]'>&#9957;</span></p>
 				<p className="flex gap-5">
 					<button className="btn bg-[#23BE0A]" onClick={() => handleMarkAsReadList(id)}>Mark as Read</button>
 					<button className="btn bg-[#59C6D2]" onClick={() => handleWishList(id)}>WhishList</button>

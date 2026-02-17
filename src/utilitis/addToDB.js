@@ -45,4 +45,4 @@ const addToStoredWishListDB = (id) => {
     }
 }   //  stored wish list end   //
 
-export { addToStoredReadDB, addToStoredWishListDB };
+export { getStoredReadList, getStoredWishList, addToStoredReadDB, addToStoredWishListDB };

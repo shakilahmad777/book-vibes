@@ -9,7 +9,7 @@ export default function NavBar() {
         <li><a onClick={() => backHome('/')}>Home</a></li>
         <li>
             <details>
-                <summary><NavLink to="/read_wish_list">Listed Book</NavLink></summary>
+                <summary><NavLink to="/book_list">Listed Books</NavLink></summary>
                 <ul className="p-2 bg-base-100 w-40 z-1">
                     <li><a>Read List</a></li>
                     <li><a>Wish List</a></li>
