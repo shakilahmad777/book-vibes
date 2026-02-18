@@ -8,6 +8,7 @@ import { useLoaderData } from 'react-router';
 export default function BooksList() {
     const allBooks = useLoaderData();
     const [readBook, setReadBook] = useState([]);
+    const [sort, setSort] = useState("")
     // const [wishBook, setWishBook] = useState([]);
 
     useEffect(() => {   //  this book added to listed component //
@@ -19,12 +20,34 @@ export default function BooksList() {
         console.log('book filter', readBookList)
         setReadBook(readBookList);
     }, []);
-    
+
+    //  sort by pages and ratings   //
+    const handleSort = (type) => {
+
+        setSort(type);
+        if (type === "Pages") {
+            const sortByPages = [...readBook].sort((a, b) => a.totalPages - b.totalPages);
+            setReadBook(sortByPages);
+        }
+        if (type === "Ratings") {
+            const sortByPages = [...readBook].sort((a, b) => a.rating - b.rating);
+            setReadBook(sortByPages);
+        }
+
+    }
+
     return (
         <div>
             <div className="text-center shadow-2xs my-5 py-5">
                 <h1 className='text-5xl'>BOOKS</h1>
             </div>
+            <details className="dropdown flex justify-center">
+                <summary className="btn m-1">Sort By: {sort ? sort : ""}</summary>
+                <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                    <li><a onClick={() => handleSort("Pages")}>Pages</a></li>
+                    <li><a onClick={() => handleSort("Ratings")}>Ratings</a></li>
+                </ul>
+            </details>
             <div className="">
                 <Tabs>
                     <TabList>
